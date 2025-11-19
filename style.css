@@ -1,0 +1,243 @@
+:root{
+  --azul: #0a214f;
+  --azul-claro: #1e3a8a;
+  --branco: #ffffff;
+  --texto: #1a1a1a;
+  --container: 1100px;
+}
+
+/* RESET */
+*{box-sizing:border-box; margin:0; padding:0;}
+body{
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background:#ffffff;
+  color:var(--texto);
+  line-height: 1.5;
+}
+.container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.site-header{
+  background:white;
+  padding:14px 0;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo img{
+  height:48px;
+  border-radius:8px;
+}
+
+/* MENU */
+.main-nav ul{
+  display:flex;
+  gap:35px;
+  list-style:none;
+}
+
+.main-nav a{
+  text-decoration:none;
+  color:var(--azul);
+  font-size:18px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.main-nav a:hover{
+  color:var(--azul-claro);
+}
+
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  font-size:32px;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+}
+
+.hero-banner{
+  width:100%;
+  height:70vh;
+  object-fit:cover;
+  display:block;
+  border-bottom:4px solid var(--azul);
+}
+
+.btn-whatsapp{
+  position:absolute;
+  bottom:40px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#22c55e;
+  color:white;
+  padding:18px 40px;
+  border-radius:50px;
+  text-decoration:none;
+  font-size:20px;
+  font-weight:bold;
+  box-shadow:0 4px 14px rgba(0,0,0,0.25);
+  transition: .3s;
+}
+
+.btn-whatsapp:hover{
+  transform:translateX(-50%) scale(1.06);
+}
+
+/* SERVIÇOS */
+.services{
+  padding:80px 0;
+  background:#ffffff;
+}
+
+.titulo-sessoes{
+  font-size:36px;
+  font-weight:700;
+  text-align:center;
+  color:var(--azul);
+  margin-bottom:35px;
+}
+
+.services-image img{
+  width:100%;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* SOBRE */
+.sobre{
+  padding:80px 0;
+  background:#f4f7ff;
+}
+
+.sobre-inner{
+  display:flex;
+  align-items:center;
+  gap:50px;
+}
+
+.imagem-sobre img{
+  width:420px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+.texto-sobre h2{
+  font-size:34px;
+  color:var(--azul);
+  margin-bottom:15px;
+}
+
+.texto-sobre p{
+  font-size:18px;
+  margin-bottom:18px;
+}
+
+/* AVALIAÇÕES */
+.avaliacoes{
+  padding:80px 0;
+  background:white;
+}
+
+.avaliacoes-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:30px;
+}
+
+.avaliacao-card{
+  background:white;
+  border-radius:16px;
+  padding:25px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.1);
+  text-align:center;
+  font-size:16px;
+}
+
+/* RODAPÉ */
+.rodape{
+  background:var(--azul);
+  color:white;
+  padding:40px 0 10px;
+  margin-top:40px;
+}
+
+.rodape-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.rodape-logo{
+  height:70px;
+}
+
+.rodape-copy{
+  text-align:center;
+  margin-top:25px;
+  opacity:0.9;
+  font-size:15px;
+  padding-top:10px;
+  border-top:1px solid rgba(255,255,255,0.2);
+}
+
+/* RESPONSIVO */
+@media (max-width:900px){
+  .sobre-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .imagem-sobre img{
+    width:90%;
+  }
+
+  .hero-banner{
+    height:55vh;
+  }
+}
+
+@media (max-width:700px){
+  .main-nav{
+    display:none;
+    position:absolute;
+    right:20px;
+    top:80px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .main-nav.open{
+    display:block;
+  }
+
+  .nav-toggle{
+    display:block;
+  }
+
+  .btn-whatsapp{
+    padding:15px 30px;
+    font-size:18px;
+  }
+}
