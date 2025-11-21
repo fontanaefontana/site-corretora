@@ -11,9 +11,8 @@ body {
     font-family: 'Playfair Display', serif;
     background-color: #fff;
     color: #0D1F4D;
+    padding-top: 110px; /* evita overlay do header fixo */
 }
-
-
 
 /* ============================
    CABEÇALHO
@@ -36,7 +35,24 @@ header .logo img {
     width: auto;
 }
 
+/* ============================
+   BOTÃO HAMBÚRGUER
+============================ */
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 2000;
+}
 
+.menu-btn span {
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: 0.3s;
+}
 
 /* ============================
    MENU DE NAVEGAÇÃO
@@ -58,10 +74,8 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-
-
 /* ============================
-   FAIXA AZUL DO RODAPÉ SUPERIOR
+   FAIXA AZUL
 ============================ */
 .topo-rodape {
     background-color: #0D1F4D;
@@ -71,8 +85,6 @@ nav ul li a:hover {
     font-family: 'Lora', serif;
     font-size: 16px;
 }
-
-
 
 /* ============================
    BANNER
@@ -134,8 +146,6 @@ nav ul li a:hover {
 .btn-whatsapp:hover {
     background-color: #2e9c3f;
 }
-
-
 
 /* ============================
    SOBRE NÓS
@@ -208,8 +218,6 @@ nav ul li a:hover {
     font-size: 16px;
     color: #0D1F4D;
 }
-
-
 
 /* ============================
    ÁREAS DE ATUAÇÃO
@@ -287,8 +295,6 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
-
-
 /* ============================
    AVALIAÇÕES
 ============================ */
@@ -316,8 +322,6 @@ nav ul li a:hover {
     max-width: 800px;
     margin: 0 auto;
 }
-
-
 
 /* ============================
    CONTATO
@@ -385,8 +389,6 @@ nav ul li a:hover {
     box-shadow: 0 0 15px rgba(212,175,55,0.5);
 }
 
-
-
 /* ============================
    RODAPÉ
 ============================ */
@@ -417,31 +419,39 @@ footer a:hover {
     margin-right: 8px;
 }
 
-
-
 /* ============================
    RESPONSIVIDADE
 ============================ */
 @media (max-width: 900px) {
 
+    /* Header e nav */
     header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 20px;
+    }
+
+    nav {
+        display: none;
         flex-direction: column;
-        gap: 15px;
     }
 
     nav ul {
         flex-direction: column;
-        gap: 15px;
-        align-items: center;
+        gap: 25px;
+        align-items: flex-start;
+        padding-left: 30px;
     }
 
-    .areas-quadrados,
-    .advogados,
-    .contato-card-mapa {
-        flex-direction: column;
-        gap: 30px;
+    .menu-btn {
+        display: flex;
     }
 
+    nav.active {
+        display: flex;
+    }
+
+    /* Banner */
     .banner-content h1 {
         font-size: 24px;
     }
@@ -451,11 +461,19 @@ footer a:hover {
         padding: 12px 24px;
     }
 
+    /* Títulos */
     .sobre-nos-container h2,
     .areas-container h2,
     .avaliacoes h2,
     .contato-container h2 {
         font-size: 28px;
     }
-}
 
+    /* Fotos lado a lado */
+    .advogados {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
