@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Corretora — Página Inicial</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ÍCONE DO WHATSAPP -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="logo" href="#home">
+        <img src="extracted_images/logo.png" alt="Logo da Corretora" />
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <img class="hero-banner" src="extracted_images/banner.jpg" alt="Banner principal">
+
+    <a class="btn-whatsapp" href="https://wa.me/5511994026484" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Fale com a gente
+    </a>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="services">
+    <div class="container">
+      <h2 class="titulo-sessoes">Serviços</h2>
+
+      <div class="services-image">
+        <img src="extracted_images/servicos.jpg" alt="Nossos serviços">
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre">
+    <div class="container sobre-inner">
+
+      <div class="imagem-sobre">
+        <img src="extracted_images/natalia.jpg" alt="Consultora Natalia">
+      </div>
+
+      <div class="texto-sobre">
+        <h2>Sobre nós</h2>
+        <p>
+          Somos uma corretora com mais de <strong>3 anos de experiência</strong>, oferecendo soluções completas e personalizadas.
+          Localizados em <strong>Santo André – SP</strong>, prezamos por transparência e atendimento humanizado.
+        </p>
+        <p>
+          Nosso compromisso é garantir segurança, tranquilidade e suporte completo para você.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+  <section id="avaliacoes" class="avaliacoes">
+    <div class="container">
+      <h2 class="titulo-sessoes">Avaliações</h2>
+
+      <div class="avaliacoes-grid">
+        <div class="avaliacao-card">
+          ⭐⭐⭐⭐⭐
+          <p>"Atendimento impecável! Rápida, atenciosa e muito profissional."</p>
+          <span>— Cliente Satisfeito</span>
+        </div>
+
+        <div class="avaliacao-card">
+          ⭐⭐⭐⭐⭐
+          <p>"Me ajudaram a encontrar o melhor seguro com o melhor preço."</p>
+          <span>— João P.</span>
+        </div>
+
+        <div class="avaliacao-card">
+          ⭐⭐⭐⭐⭐
+          <p>"Super recomendo! Serviço de confiança e transparência."</p>
+          <span>— Fernanda L.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contact">
+    <div class="container">
+      <h2 class="titulo-sessoes">Contato</h2>
+
+      <form id="form-whats">
+
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" id="nome" required>
+        </div>
+
+        <div class="form-group">
+          <label>Telefone</label>
+          <input type="text" id="telefone" required>
+        </div>
+
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+          <label>Seguro desejado</label>
+          <select id="seguro">
+            <option value="Seguro Auto">Seguro Auto</option>
+            <option value="Seguro Vida">Seguro Vida</option>
+            <option value="Seguro Residencial">Seguro Residencial</option>
+            <option value="Seguro Empresarial">Seguro Empresarial</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Mensagem</label>
+          <textarea id="mensagem" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn-contato">
+          <i class="fa-brands fa-whatsapp"></i> Enviar pelo WhatsApp
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="container rodape-inner">
+
+      <div class="rodape-col">
+        <img src="extracted_images/logorodape.png" class="rodape-logo" alt="Logo Cazeri Seguros">
+      </div>
+
+      <div class="rodape-col">
+        <h3>Contato</h3>
+        <p>📞 (11) 99402-6484</p>
+        <p>📷 Instagram: @cazeriseguros</p>
+      </div>
+
+    </div>
+
+    <div class="rodape-copy">
+      Rua General Glicério, 45 — Sala 33 — Santo André — SP
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+  <a href="https://wa.me/5511994026484" target="_blank" class="whats-floating">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    // FORMULÁRIO PARA WHATSAPP
+    document.getElementById("form-whats").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nome = document.getElementById("nome").value;
+      const telefone = document.getElementById("telefone").value;
+      const email = document.getElementById("email").value;
+      const seguro = document.getElementById("seguro").value;
+      const mensagem = document.getElementById("mensagem").value;
+
+      const texto = encodeURIComponent(
+        `Olá! Tenho interesse em um seguro.\n\n` +
+        `👤 Nome: ${nome}\n` +
+        `📞 Telefone: ${telefone}\n` +
+        `📧 E-mail: ${email}\n` +
+        `🛡️ Seguro desejado: ${seguro}\n` +
+        `💬 Mensagem: ${mensagem}`
+      );
+
+      window.open(`https://wa.me/5511994026484?text=${texto}`, "_blank");
+    });
+  </script>
+
+</body>
+</html>
