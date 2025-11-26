@@ -9,7 +9,7 @@
 /* RESET */
 *{box-sizing:border-box; margin:0; padding:0;}
 body{
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   background:#ffffff;
   color:var(--texto);
   line-height: 1.5;
@@ -82,6 +82,7 @@ body{
   border-bottom:4px solid var(--azul);
 }
 
+/* BOTÃO WHATSAPP (MODERNIZADO) */
 .btn-whatsapp{
   position:absolute;
   bottom:40px;
@@ -89,11 +90,13 @@ body{
   transform:translateX(-50%);
   background:#22c55e;
   color:white;
-  padding:18px 40px;
+  padding:20px 45px;
   border-radius:50px;
   text-decoration:none;
-  font-size:20px;
-  font-weight:bold;
+  font-size:22px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
   box-shadow:0 4px 14px rgba(0,0,0,0.25);
   transition: .3s;
 }
@@ -102,14 +105,15 @@ body{
   transform:translateX(-50%) scale(1.06);
 }
 
-/* SEÇÕES */
+/* TÍTULOS DAS SESSÕES */
 .titulo-sessoes{
-  font-size:36px;
+  font-size:34px;
   font-weight:700;
-  text-align:center;
   color:var(--azul);
-  margin-bottom:35px;
+  margin-bottom:15px;
+  text-align:center; 
 }
+
 
 /* SERVIÇOS */
 .services{
@@ -129,10 +133,15 @@ body{
   background:#f4f7ff;
 }
 
+/* CARD MODERNO DO SOBRE */
 .sobre-inner{
   display:flex;
   align-items:center;
   gap:50px;
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.12);
 }
 
 .imagem-sobre img{
@@ -141,10 +150,14 @@ body{
   box-shadow:0 8px 25px rgba(0,0,0,0.15);
 }
 
+/* TÍTULO MODERNO */
 .texto-sobre h2{
-  font-size:34px;
+  font-size:38px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:2px;
   color:var(--azul);
-  margin-bottom:15px;
+  margin-bottom:20px;
 }
 
 .texto-sobre p{
@@ -300,23 +313,35 @@ select:focus{
   .hero-banner{
     height:55vh;
   }
-}
 
 @media (max-width:700px){
-  .main-nav{
-    display:none;
-    position:absolute;
-    right:20px;
-    top:80px;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.1);
-  }
+.main-nav{
+  display:none;
+  position:absolute;
+  right:20px;
+  top:80px;
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.1);
+  width: 220px;             
+}
 
-  .main-nav.open{
-    display:block;
-  }
+.main-nav ul{
+  display:flex;
+  flex-direction:column;  
+  gap:20px;                 
+}
+
+.main-nav a{
+  font-size:18px;
+  text-align:left;          
+}
+
+.main-nav.open{
+  display:block;
+}
+
 
   .nav-toggle{
     display:block;
@@ -325,6 +350,7 @@ select:focus{
   .btn-whatsapp{
     padding:15px 30px;
     font-size:18px;
-  }
+
 }
+
 
